@@ -1,0 +1,212 @@
+<!--
+    @version: 2.0
+    @Author	: 肖思宇
+-->
+
+<!doctype html>
+<html lang="en">
+<head>
+    <title>图像识别图片上传</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Education Tutorial Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
+		Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+    <script type="application/x-javascript">
+        addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); }
+    </script>
+    <!--bootstrap-->
+    <link href="../../static/css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+    <!--coustom css-->
+    <link href="../../static/css/style.css" rel="stylesheet" type="text/css"/>
+    <!--script-->
+    <script src="../../static/js/jquery-1.11.0.min.js"></script>
+    <!-- js -->
+    <script src="../../static/js/bootstrap.js"></script>
+    <!-- /js -->
+    <!--fonts-->
+    <link href='http://fonts.useso.com/css?family=Open+Sans:300,300italic,400italic,400,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+    <!--/fonts-->
+    <!--hover-girds-->
+    <link rel="stylesheet" type="text/css" href="../../static/css/default.css" />
+    <link rel="stylesheet" type="text/css" href="../../static/css/component.css" />
+    <link rel="stylesheet" type="text/css" href="../../static/css/upload.css" />
+    <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+    <script src="../../static/js/modernizr.custom.js"></script>
+    <!--/hover-grids-->
+    <script type="text/javascript" src="../../static/js/move-top.js"></script>
+    <script type="text/javascript" src="../../static/js/easing.js"></script>
+    <!--script-->
+    <script type="text/javascript">
+        jQuery(document).ready(function($) {
+            $(".scroll").click(function(event){
+                event.preventDefault();
+                $('html,body').animate({scrollTop:$(this.hash).offset().top},900);
+            });
+        });
+
+    </script>
+    <!--/script-->
+
+</head>
+
+<body>
+<!--header-->
+<div class="header" id="home">
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"> </span>
+                    <span class="icon-bar"> </span>
+                    <span class="icon-bar"> </span>
+                </button>
+                <h1><a class="navbar-brand" href="FlatAngle">平角<br /><span>FlatAngle&nbsp;</span></a></h1>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right margin-top cl-effect-2">
+                    <li><a href="FlatAngle"><span data-hover="Home">主页</span></a></li>
+                    <li><a href="segmentation_upload"><span data-hover="About">前景分割</span></a></li>
+                    <li><a href="identification_upload"><span data-hover="Shortcodes">图像识别</span></a></li>
+                    <li><a href="resolution_upload"><span data-hover="Gallery">分辨率增强</span></a></li>
+                    <li><a href="about"><span data-hover="Contact">关于我们</span></a></li>
+                </ul>
+                <div class="clearfix"> </div>
+            </div>
+            <!-- /.navbar-collapse -->
+            <!-- /.container-fluid -->
+            <div class="login-pop">
+                <div id="loginpop"><a href="#" id="loginButton"><span>登录</span></a>
+                    <div id="loginBox">
+                        <form id="loginForm">
+                            <fieldset id="body">
+                                <fieldset>
+                                    <label for="email">电子邮箱</label>
+                                    <input type="text" id="email">
+                                </fieldset>
+                                <fieldset>
+                                    <label for="password">密码</label>
+                                    <input type="password" id="password">
+                                </fieldset>
+                                <input type="submit" id="login" value="登录">
+                                <label for="checkbox"><input type="checkbox" id="checkbox"> <i>记住我</i></label>
+                            </fieldset>
+                            <span><a href="#">没有账号？点击注册</a></span>
+                            <span><a href="#">忘记密码？</a></span>
+                        </form>
+                    </div>
+                </div>
+            </div><script src="../../static/js/menu_jquery.js"></script>
+        </div>
+    </nav>
+    <!--/script-->
+    <div class="clearfix"> </div>
+</div>
+
+<div class="main">
+    <div class="upload_show_block">
+        <form method="POST" enctype="multipart/form-data" class="form" >
+            <div class="drag_area">
+                <div class="icon">
+                    <i class="fa fa-clipboard" style="font-size:100px; color: #FFFFFF;" ></i>
+                </div>
+                <header>
+                    拖拽图片到此处
+                </header>
+                <span>或</span>
+                <button type="button" >
+                    浏览本地图片
+                </button>
+            </div>
+            <input type="file" id="inputfile" name="image_file" style="display: none !important;"/>
+            <input type="submit" id="uploadfile"  hidden="hidden"/>
+            <input type="text" name="online_img_url"  class="urlInput" placeholder="图片在线url">
+        </form>
+    </div>
+    <div class="button_area" >
+        <button type=button" onclick="UploadFile()" style="display: block;">上传图片</button>
+    </div>
+</div>
+
+
+<div class="footer">
+    <!-- container -->
+    <div class="container">
+        <div class="col-md-6 footer-left">
+            <ul>
+                <li><a href="FlatAngle">主页</a></li>
+                <li><a href="segmentation_upload">前景分割</a></li>
+                <li><a href="identification_upload">图像识别</a></li>
+                <li><a href="resolution_upload">分辨率增强</a></li>
+                <li><a href="about">关于我们</a></li>
+            </ul>
+            <form>
+                <input type="text" placeholder="电子邮箱" required="">
+                <input type="submit" value="订阅">
+            </form>
+        </div>
+        <div class="col-md-3 footer-middle">
+            <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;地址信息</h3>
+            <div class="address">
+                <p>武汉大学,
+                    <span>平角路201</span>
+                </p>
+            </div>
+            <div class="phone">
+                <p>QQ 798473562</p>
+            </div>
+        </div>
+        <div class="col-md-3 footer-right">
+            <h3>相关信息</h3>
+            <p>凡事不必苛求，来了就来了；凡事不必计较，过了就过了；遇事不要皱眉，笑了就笑了；结果不要强求，做了就对了。</p>
+        </div>
+        <div class="clearfix"> </div>
+    </div>
+    <!-- //container -->
+</div>
+<!--/footer-->
+<!--copy-rights-->
+<div class="copyright">
+    <!-- container -->
+    <div class="container">
+        <div class="copyright-left">
+            <p>&copy;<a target="_blank" href="#">平角</a></p>
+        </div>
+        <div class="copyright-right">
+            <ul>
+                <li><a href="#" class="twitter"> </a></li>
+                <li><a href="#" class="twitter facebook"> </a></li>
+                <li><a href="#" class="twitter chrome"> </a></li>
+                <li><a href="#" class="twitter pinterest"> </a></li>
+                <li><a href="#" class="twitter linkedin"> </a></li>
+                <li><a href="#" class="twitter dribbble"> </a></li>
+            </ul>
+        </div>
+        <div class="clearfix"> </div>
+
+    </div>
+    <!-- //container -->
+    <!---->
+    <script type="text/javascript">
+        $(document).ready(function() {
+            /*
+            var defaults = {
+            containerID: 'toTop', // fading element id
+            containerHoverID: 'toTopHover', // fading element hover id
+            scrollSpeed: 1200,
+            easingType: 'linear'
+            };
+            */
+            $().UItoTop({ easingType: 'easeOutQuart' });
+        });
+    </script>
+    <script type="text/javascript" src="../../static/js/upload.js"></script>
+    <!-- //gallery popup js -->
+    <a href="#to-top" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+    <!---->
+</div>
+<!--/copy-rights-->
+</body>
+</html>

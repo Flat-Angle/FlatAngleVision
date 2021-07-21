@@ -1,0 +1,252 @@
+/*
+	@version: 2.0
+	@Author	: 肖思宇
+*/
+
+body
+{
+	margin: 0px;
+}
+.in
+{
+	padding-top: 130px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+	background-color: #c2e0ff;
+}
+
+.mainBlock
+{
+	display: flex;
+	flex-direction: column;
+}
+
+
+.buttonBlock
+{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 30px;
+}
+
+.left_button
+{
+	display: flex;
+	margin-right: 250px;
+}
+
+.right_button
+{
+	margin-left: 200px;
+}
+
+.urlInput
+{
+	margin: 15px  5px;
+	border-radius: 2px;
+	border: none;
+	padding: 11px 5px;
+	width: 630px;
+	color: #333;
+	background: #ffffffd9;
+
+}
+
+.previewButton
+{
+	justify-items: center;
+	align-items: center;
+	
+	margin-right: 70px;
+}
+
+.uploadButton
+{
+	justify-items: center;
+	align-items: center;
+	
+	margin-left: 80px;
+}
+
+.down_button
+{
+	margin-right: 200px;
+}
+
+.imageBlock
+{
+	display: flex;
+}
+
+.iconBlock
+{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin: 0 20px;
+}
+
+.arrowLogo
+{
+	margin-top: -50px;
+}
+
+#select
+{
+	display:block;
+	width:100%;
+	height:100%;
+	box-sizing:border-box;
+	background:none;
+	border:1px solid #00b9d5;
+	outline:none;
+	-webkit-appearance:none;
+	padding:0 5px;
+	line-height:inherit;
+	color:inherit;
+	cursor:default;
+	font-size:14px;
+	position:relative;
+	z-index:3;
+}
+#select option
+{
+	color:#222;
+}
+#select option:hover
+{
+	color:#fff;
+}
+#select option:checked
+{
+	background:#535353;
+	color:#fff;
+}
+/* 然后在外层div#selectStyle设置自定义样式 */
+#selectStyle
+{
+	display:block;
+	margin:0 auto;
+	overflow:hidden;
+	height:30px;
+	width:80px;
+	border-radius:0;
+	background:#7fd3ce;
+	background-size:auto 80%;
+	color:#fff;
+	line-height:2;
+	/* 如果不想加图片，
+	则可以设置一个自己的三角形样式，
+	如下的自定义方式，
+	见代码1 */
+	position:relative;
+	z-index:1;
+}
+/* 代码1 */
+#selectStyle:before
+{
+	position:absolute;
+	z-index:1;
+	top:50%;
+	right:10px;
+	margin-top:-2.5px;
+	display:block;
+	width:0;
+	height:0;
+	border-style:solid;
+	border-width:5px 5px 0 5px;
+	border-color:#fff transparent transparent transparent;
+	content:"";
+}
+/* 代码1 */
+#selectStyle:after
+{
+	position:absolute;
+	z-index:1;
+	top:50%;
+	right:10px;
+	margin-top:-3.5px;
+	display:block;
+	width:0;
+	height:0;
+	border-style:solid;
+	border-width:5px 5px 0 5px;
+	border-color:#d1d1d1 transparent transparent transparent;
+	content:"";
+}
+
+
+.buttonBlock button
+{
+	padding: 10px 25px;
+	font-size: 20px;
+	font-weight: 500;
+	border: none;
+	outline: none;
+	background-color: #fff;
+	color: #00D9FF;
+	border-radius: 10px 20px;
+	cursor: pointer;
+	
+	/* transition:background-color 1s;
+	transition: color 1s; */
+	transition: all 1s;
+	
+	transition-timing-function: ease-out;
+	
+	/*
+	transition-property: background-color , color
+	transition: all 2s;  
+	 */
+}
+
+.buttonBlock button:hover
+{
+	transform: scale(1.2);
+	border-radius: 5px;
+	background-color: #00c7c7;
+	color: #FFFFFF;
+}
+.previewImage
+{
+	border: 2px dashed #fff;
+	height: 360px;
+	width: 640px;
+	border-radius: 5px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.previewImage img
+{
+	max-width: 100%;
+	max-height: 100%;
+	object-fit: cover;
+	border-radius: 5px;
+}
+
+.completeImage
+{
+	border: 2px dashed #fff;
+	height: 360px;
+	width: 640px;
+	border-radius: 5px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.completeImage img
+{
+	max-width: 100%;
+	max-height: 100%;
+	object-fit: cover;
+	border-radius: 5px;
+}

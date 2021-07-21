@@ -1,0 +1,192 @@
+/*
+	@version: 2.0
+	@Author	: 肖思宇
+*/
+
+body
+{
+    margin: 0;
+}
+
+.in
+{
+    padding-top: 115px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #c2e0ff;
+}
+
+.in form
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.drag_area
+{
+    border: 2px dashed #fff;
+    height: 500px;
+    width: 700px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    /* 动画缩放 */
+}
+
+.drag_area.active
+{
+    border: 2px solid #fff;
+
+}
+
+.drag_area.showFile
+{
+
+    -webkit-animation-name: myfirst;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes myfirst
+{
+    0%{
+        transform: translateX(1%);
+    }
+
+    100% {
+        margin-left: -10%;
+        transform: translate(0%);
+    }
+}
+
+/* .drag_area.icon
+{
+	margin-bottom: ;
+} */
+
+.drag_area header
+{
+    font-size: 30px;
+    font-weight: 500;
+    color: #fff;
+}
+
+.drag_area span
+{
+    font-size: 25px;
+    font-weight: 500;
+    color: #fff;
+    margin: 10px 0 15px 0;
+}
+
+.drag_area button
+{
+    padding: 10px 25px;
+    font-size: 20px;
+    font-weight: 500;
+    border: none;
+    outline: none;
+    background-color: #fff;
+    color: #00D9FF;
+    border-radius: 10px 20px;
+    cursor: pointer;
+
+    /* transition:background-color 1s;
+    transition: color 1s; */
+    transition: all 1s;
+
+    transition-timing-function: ease-out;
+
+    /*
+    transition-property: background-color , color
+    transition: all 2s;
+     */
+}
+
+.drag_area button:hover
+{
+    transform: scale(1.2);
+    border-radius: 5px;
+    background-color: #00c7c7;
+    color: #FFFFFF;
+}
+
+.drag_area img
+{
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+#inputfile
+{
+    display: none !important;
+}
+
+.button_area
+{
+    align-items: center;
+    justify-content: center;
+    margin-left: 10%;
+}
+
+.button_area button
+{
+    padding: 10px 25px;
+    font-size: 40px;
+    font-weight: 500;
+    border: none;
+    outline: none;
+    background-color: #fff;
+    color: #00D9FF;
+    border-radius: 10px 20px;
+    cursor: pointer;
+
+    transition: all 1s;
+    transition-timing-function: ease-out;
+
+    -webkit-animation: right-to-left 1s linear ;
+}
+
+.button_area button:hover
+{
+    transform: scale(1.2);
+    border-radius: 5px;
+    background-color: #00c7c7;
+    color: #FFFFFF;
+}
+
+@-webkit-keyframes right-to-left
+{
+    0%{
+        opacity: 0;
+        transform: translateX(120%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.button_area.active
+{
+    border: 2px solid #fff;
+    height: 500px;
+    width: 700px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+

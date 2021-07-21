@@ -1,0 +1,144 @@
+/*
+	@version: 2.0
+	@Author	: 肖思宇
+*/
+
+body
+{
+    margin: 0;
+}
+
+.main
+{
+    padding-top: 115px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #c2e0ff;
+    flex-direction: column;
+}
+.upload_show_block
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.drag_area
+{
+    border: 2px dashed #fff;
+    height: 500px;
+    width: 700px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    /* 动画缩放 */
+}
+
+.drag_area.active
+{
+    border: 2px solid #fff;
+
+}
+
+.drag_area header
+{
+    font-size: 30px;
+    font-weight: 500;
+    color: #fff;
+}
+
+.drag_area span
+{
+    font-size: 25px;
+    font-weight: 500;
+    color: #fff;
+    margin: 10px 0 15px 0;
+}
+
+.drag_area button
+{
+    padding: 10px 25px;
+    font-size: 20px;
+    font-weight: 500;
+    border: none;
+    outline: none;
+    background-color: #fff;
+    color: #00D9FF;
+    border-radius: 10px 20px;
+    cursor: pointer;
+
+    transition: all 1s;
+
+    transition-timing-function: ease-out;
+
+
+}
+
+.drag_area button:hover
+{
+    transform: scale(1.2);
+    border-radius: 5px;
+    background-color: #00c7c7;
+    color: #FFFFFF;
+}
+
+.drag_area img
+{
+    max-width: 700px;
+    max-height: 500px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.urlInput
+{
+    margin: 15px  5px;
+    border-radius: 2px;
+    border: none;
+    padding: 11px 5px;
+    width: 695px;
+    color: #333;
+    background: #ffffffd9;
+
+}
+
+
+.button_area
+{
+    align-items: center;
+    justify-content: center;
+}
+
+.button_area button
+{
+    padding: 10px 25px;
+    font-size: 24px;
+    font-weight: 500;
+    border: none;
+    outline: none;
+    background-color: #fff;
+    color: #00D9FF;
+    border-radius: 10px 20px;
+    cursor: pointer;
+
+    transition: all 1s;
+    transition-timing-function: ease-out;
+
+    -webkit-animation: right-to-left 1s linear ;
+}
+
+.button_area button:hover
+{
+    transform: scale(1.2);
+    border-radius: 5px;
+    background-color: #00c7c7;
+    color: #FFFFFF;
+}
+
+

@@ -1,8 +1,0 @@
-numpy==1.19.5
-tensorflow_gpu==2.5.0
-requests==2.25.1
-opencv_python==4.5.2.54
-Flask==2.0.1
-tensorflow==2.5.0
-gunicorn
-gevent

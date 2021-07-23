@@ -1,0 +1,7 @@
+2021-07-22 Thursday 15:09:28  _internal.py : INFO   * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-07-22 Thursday 15:10:47  _internal.py : INFO  127.0.0.1 - - [22/Jul/2021 15:10:47] "[32mPOST /recognization/online HTTP/1.1[0m" 308 -
+2021-07-22 Thursday 15:10:50  start.py : INFO  ÔÚÏßÍ¼Æ¬·Ö¸î½Ó¿Ú¡ª¡ª»ñµÃÍ¼Æ¬Êý¾ÝÁ÷
+2021-07-22 Thursday 15:10:50  start.py : INFO  Ð´Ô­Í¼³É¹¦
+2021-07-22 Thursday 15:10:50  start.py : INFO  ÔÚÏßÍ¼Æ¬Ê¶±ð½Ó¿Ú--×¼±¸½øÐÐ´¦Àí
+2021-07-22 Thursday 15:11:00  start.py : INFO  ÔÚÏßÍ¼Æ¬Ê¶±ð½Ó¿Ú--´¦Àí³É¹¦
+2021-07-22 Thursday 15:11:00  _internal.py : INFO  127.0.0.1 - - [22/Jul/2021 15:11:00] "POST /recognization/online/ HTTP/1.1" 200 -
